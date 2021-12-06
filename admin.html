@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+ 
+
+<head>
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+
+            ADMIN COVID
+
+        </title>
+
+        <!--Icone de l'onglet-->
+
+        <link rel="shortcut icon" href="./static//images/logoVirus.png" type="image/png">
+
+   
+
+        <!--fonts google-->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+
+   
+
+        <!--Boxicons-->
+
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+   
+
+        <!--liaison css-->
+
+        <link rel="stylesheet" href="./static/css/appADMIN.css">
+
+        <link rel="stylesheet" href="./static/css/gridADMIN.css">
+
+    </head>
+
+</head>
+
+ 
+
+<body>
+
+ 
+
+    <!--entete-->
+
+    <div class= "nav-wrapper">
+
+        <div class="container">
+
+            <div class="nav">
+
+                <a href="" class="logo">
+
+                    ADMIN COVID
+
+                </a>
+
+                <div class="admin">
+
+                    <span >
+
+                        <a href="./index.html"><i class='bx bxs-cog'></i></a>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+           
+
+        </div>
+
+    </div>
+
+ 
+
+    <!-- Changement base de donnée -->
+
+    <div class="col-4 col-md-4 col-sm-12">
+
+        <div class="box box-hover">
+
+            <div class="compte compte-guerisons">
+
+                <div class="compte-icone">
+
+                    <i class='bx bx-wrench' ></i>
+
+                </div>
+
+                <div class="compte-infos">
+
+                    <h5 id="total-guerisons"><input type="text" placeholder="Changer nb de guérisons" id="Guerison"></h5>
+
+                    <button type="button" onclick="getValue();">Valider</button>
+
+                    <script>
+
+                        function getValue() {
+
+                        // Sélectionner l'élément input et récupérer sa valeur
+
+                        var input = document.getElementById("Guerison").value;
+
+                        document.getElementById("apercue").value = input ;
+
+                        }
+
+                    </script>
+
+                    <span>guérisons</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+ 
+
+    <div class="col-4 col-md-4 col-sm-12">
+
+        <div class="box box-hover">
+
+            <div class="compte compte-guerisons">
+
+                <div class="compte-infos">
+
+                    <h5 id="total-guerisons"><input type="text" id="apercue"></h5>
+
+                    <span>guérisons</span>
+
+                </div>
+
+                <div class="compte-icone">
+
+                    <i class="bx bxs-user-check"></i>
+
+                </div>
+
+               
+
+            </div>
+
+        </div>
+
+    </div>
+
+ 
+
+</body>
+
+</html>

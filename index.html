@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Tableau de bord COVID
+    </title>
+    <!--Icone de l'onglet-->
+    <link rel="shortcut icon" href="./static//images/logoVirus.png" type="image/png">
+
+    <!--fonts google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+
+    <!--Boxicons-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--liaison css-->
+    <link rel="stylesheet" href="./static/css/grid.css">
+    <link rel="stylesheet" href="./static/css/app.css">
+</head>
+
+
+
+<body class="loading">
+
+    <!--entete-->
+    <div class= "nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="" class="logo">
+                    Tableau de bord COVID 
+                </a> 
+                <div class="admin">
+                    <span>
+                        <a href="./login.html"><i class='bx bxs-cog'></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--main-->
+    <div class= "content">
+        <div class="container">
+
+            <!--choix du pays-->
+            <div class= "row">
+                <div class="col-3 col-md-6 col-sm-12">
+                    <div class= "box">
+                        <div class="choix-pays" id="choix-pays">
+                            <div class="choix-pays-activer" id="choix-pays-activer">
+                                <span> <!--pour ne pas aller a la ligne-->
+                                    Monde entier
+                                </span>
+                                <i class="bx bx-chevron-down"></i>
+                            </div>
+                            <div class="choix-pays-liste" id="choix-pays-liste">
+                                <input type="text" placeholder="Rechercher pays">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--infos--> 
+            <div class= "row">
+                <!--Partie gauche-->
+                <div class="col-8 col-md-12 col-sm-12">
+                    <div class="row">
+
+                        <!--compteur-->
+                        <div class="col-4 col-md-4 col-sm-12">
+                            <div class="box box-hover">
+                                <div class="compte compte-casConfirmes">
+                                    <div class="compte-icone">
+                                        <i class="bx bxs-virus"></i>
+                                    </div>
+                                    <div class="compte-infos">
+                                        <h5 id="total-confirmes">260,658,768</h5>
+                                        <span>cas confirmés</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--compteur-->
+                        <div class="col-4 col-md-4 col-sm-12">
+                            <div class="box box-hover">
+                                <div class="compte compte-guerisons">
+                                    <div class="compte-icone">
+                                        <i class="bx bxs-user-check"></i>
+                                    </div>
+                                    <div class="compte-infos">
+                                        <h5 id="total-guerisons">212,644,677</h5>
+                                        <span>guérisons</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--compteur-->
+                        <div class="col-4 col-md-4 col-sm-12">
+                            <div class="box box-hover">
+                                <div class="compte compte-deces">
+                                    <div class="compte-icone">
+                                        <i class="bx bxs-user-x"></i>
+                                    </div>
+                                    <div class="compte-infos">
+                                        <h5 id="total-deces">5,182,449</h5>
+                                        <span>décès</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Graph sur toute la periode-->
+                        <div class="col-12">
+                            <div class="box">
+                                <div class="box-header">
+                                    toute la  période
+                                </div>
+                                <div class="box-body">
+                                    <div id="toute-la-periode"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--ajout video gouv-->
+                        <div class="col-6 col-md col-sm-12">
+                            <div class="box">
+                                <div class="box-header">
+                                    Gestes barrière
+                                </div>
+                                <div class="box-body">
+                                    <!--YouTube-->
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/pucA-FkwF_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--ajout video gouv-->
+                        <div class="col-6 col-md col-sm-12">
+                            <div class="box">
+                                <div class="box-header">
+                                    Tous Anti Covid
+                                </div>
+                                <div class="box-body">
+                                    <!--YouTube-->
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/pot3wVMHt0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+                <!--fin partie gauche-->
+
+                <!--Partie droite-->
+                <div class="col-4 col-md-12 col-sm-12">
+
+                    <!--graphique sur 30 jours-->
+                    <div class="box">
+                        <div class="box-header">
+                            30 derniers jours
+                        </div>
+                        <div class="box-body">
+                            <div id="graph-jours"></div>
+                        </div>
+                    </div>
+
+                    <!--graphique taux de guérisons-->
+                    <div class="box">
+                        <div class="box-header">
+                            taux de guérisons
+                        </div>
+                        <div class="box-body">
+                            <div id="graph-taux-gurisons"></div>
+                        </div>
+                    </div>
+
+                    <!--Pays les plus touchés-->
+                    <div class="box">
+                        <div class="box-header">
+                            Pays les plus touchés
+                        </div>
+                        <div class="box-body">
+                            <table class="table-pays" id="table-pays">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Pays
+                                        </th>
+                                        <th>Cas confirmés</th>
+                                        <th>Guérisons</th>
+                                        <th>Décès</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--fin partie droite-->
+
+            </div>
+            <!--fin infos--> 
+
+        </div>
+    </div>
+    <!--fin main-->
+
+    <!--footer-->
+    <div class="footer">
+        ECE Paris - Cécile DEHAN & Swathi SATHASIVAM    (Source : <a href="https://documenter.getpostman.com/view/10808728/SzS8rjbc#b07f97ba-24f4-4ebe-ad71-97fa35f3b683" target="_blank">api.covid19api.com</a>)  
+    </div>
+
+    <!--loader-->
+    <div class="loader">
+        <i class='bx bx-loader-alt bx-spin bx-rotate-90' ></i>
+        <!--<i class="bx bxs-virus bx-spin"></i>-->
+    </div>
+
+    <!--graph avec apexcharts-->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!--js-->
+    <script src="./static/js/fetchApi.js"></script>
+    <script src="./static/js/covidApi.js"></script>
+    <script src="./static/js/app.js"></script>
+
+</body>
+</html>
